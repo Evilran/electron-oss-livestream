@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+html, body {
+  font-family: sans-serif;
+  font-size: 12px;
+  height: 100%;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 0 0 30%;
+  border-right: 1px solid #000;
+}
+
+.live {
+  display: flex;
+  flex: 0 0 70%;
+  flex-flow: column nowrap;
+  padding: 1rem;
+}
+
+#liveVideo {
+  display: block;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.server {
+  display: flex;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+
+.footer {
+  display: table;
+  margin: auto;
+}
+
+.footer > img {
+  margin: 1em;
+}
+
+.input {
+  display: flex;
+  flex-flow: row nowrap;
+  border-top: 1px solid #000;
+  flex: 0 1 auto;
+  padding: 1em;
+  margin-bottom: 0.5em;
+}
+
+aside {
+  min-width: 5em;
+  flex: 0 1 auto;
+  padding: 0.5rem;
+}
+
+aside > h4 {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+#chat {
+  word-wrap:break-word; 
+  word-break:break-all; 
+  overflow-y: scroll;
+  flex: 1 1 auto;
+  padding: 0.5rem;
+}
+
+#chat-text > p {
+  margin-bottom: 0.5rem;
+  border: #000;
+  font-size: medium;
+}
+
+#chat-text > p:hover {
+  background-color: #eee;
+  border: 1px solid;
+  padding: 0.1rem;
+}
+#chat-status-msg {
+  position: absolute;
+  bottom: 0.2em;
+  padding-left: 0.5em;
+  font-family: sans-serif;
+  font-style: italic;
+  color: royalblue;
+}
+
+#users-title {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+#user-stats {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#users {
+  word-wrap:break-word; 
+  word-break:break-all; 
+  overflow: hidden;
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+#users > li {
+  padding: 0.25em;
+  cursor: pointer;
+}
+
+#users > li:hover {
+  background-color: #eee;
+}
+
+#text-input {
+  flex: 1 1 auto;
+  margin-right: 1em;
+  font-size: 1.5em;
+  padding: 0.3em;
+}
+
+#send-btn {
+  box-shadow: 3px 4px 0px 0px #1564ad;
+	background:linear-gradient(to bottom, #8ac5ff 5%, #378de5 100%);
+	background-color:#8ac5ff;
+	border-radius:0.5rem;
+	border:1px solid #337bc4;
+	display:inline-block;
+	color:#ffffff;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+  flex: 0 0 auto;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+#send-btn:hover {
+  background:linear-gradient(to bottom, #378de5 5%, #8ac5ff 100%);
+	background-color:#378de5;
+}
+#send-btn:active {
+	position:relative;
+	top:1px;
+}
+
+#login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  font-size: 2em;
+  transition: top 0.2s, opacity 0.2s;
+}
+
+#login-box.hidden {
+  top: -100vh;
+  opacity: 0;
+}
+
+#login-box > div {
+  padding: 1em;
+  background: #fff;
+  border-radius: 6px;
+}
+
+#login-box h2 {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+#login-box input {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  padding: 1rem;
+}
